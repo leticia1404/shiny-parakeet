@@ -19,6 +19,7 @@ public class Quote {
         this.type = type;
     }
 
+    
     public Value getValue() {
         return value;
     }
@@ -27,6 +28,11 @@ public class Quote {
         this.value = value;
     }
 
+    public String getPhrase() {
+        return value.getPhrase();
+    }
+
+    
     @Override
     public String toString() {
         return "Quote{" +

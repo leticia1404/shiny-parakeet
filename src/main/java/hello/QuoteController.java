@@ -16,13 +16,9 @@ public class QuoteController {
 	@Autowired
 	private QuoteService qs;
 	
-	public QuoteController(QuoteService quoteService) {
-		qs = quoteService;
-	}
-
 	@GetMapping("/quotes")
 	public String showQuote(RestTemplate restTemplate, Model model) {
-		QuoteService qs = new QuoteService(restTemplate);
+		qs = new QuoteService(restTemplate);
 		Quote quote = qs.getQuote();
         log.info(quote.toString());
         model.addAttribute("q",quote);
